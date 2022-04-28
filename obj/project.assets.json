@@ -460,9 +460,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\n33r9\\source\\repos\\WinFormsApp1\\WinFormsApp1.csproj",
-      "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Users\\n33r9\\source\\repos\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Users\\n33r9\\source\\repos\\WinFormsApp1\\QLNV.csproj",
+      "projectName": "QLNV",
+      "projectPath": "C:\\Users\\n33r9\\source\\repos\\WinFormsApp1\\QLNV.csproj",
       "packagesPath": "C:\\Users\\n33r9\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\n33r9\\source\\repos\\WinFormsApp1\\obj\\",
       "projectStyle": "PackageReference",
