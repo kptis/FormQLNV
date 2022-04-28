@@ -196,21 +196,20 @@ namespace WinFormsApp1
                     txtMaNV.Text = danhsachNhanVien.Rows[index].Cells["MaNV"].Value.ToString();
                     txtMaPB.Text = danhsachNhanVien.Rows[index].Cells["MaPB"].Value.ToString();
                     txtHoten.Text = danhsachNhanVien.Rows[index].Cells["HoTen"].Value.ToString();
-                    if (danhsachNhanVien.Rows[index].Cells["NS"].Value.ToString() != "")
-                    {
-                         dateTimePicker1_NS.Value = Convert.ToDateTime(danhsachNhanVien.Rows[index].Cells["NS"].Value);
-                    }
                     txtLuong.Text = danhsachNhanVien.Rows[index].Cells["Luong"].Value.ToString();
                     txtdiachi.Text = danhsachNhanVien.Rows[index].Cells["DC"].Value.ToString();
-                    if (danhsachNhanVien.Rows[index].Cells["GT"].Value.ToString() == "Nam")
+                    
+                    string gioiTinh = danhsachNhanVien.Rows[index].Cells["GT"].Value.ToString();
+                    if (gioiTinh.Trim() == "Nam")
                     {
-                         radioButton1_nam.Checked=true;
+                         MessageBox.Show(danhsachNhanVien.Rows[index].Cells["GT"].Value.ToString());
+                         radioButton1_nam.Checked = true;
                     }
-                    else if (danhsachNhanVien.Rows[index].Cells["GT"].Value.ToString() == "Nữ")
+                    else if (gioiTinh.Trim().Equals("Nữ"))
                     {
                          radioButton2_nu.Checked = true;
                     }
-                    else if (danhsachNhanVien.Rows[index].Cells["GT"].Value.ToString() == "Chưa rõ")
+                    else if (gioiTinh.Trim().Equals("Chưa rõ"))
                     {
                          radioButton3_chuaro.Checked = true;
                     }
@@ -220,6 +219,17 @@ namespace WinFormsApp1
                          radioButton2_nu.Checked = false;
                          radioButton3_chuaro.Checked = false;
                     }
+
+                    if (danhsachNhanVien.Rows[index].Cells["NS"].Value.ToString() != "")
+                    {
+                         dateTimePicker1_NS.Value = Convert.ToDateTime(danhsachNhanVien.Rows[index].Cells["NS"].Value);
+                    }
+                    else
+                    {
+                         dateTimePicker1_NS.Value = DateTime.Today;
+                    }
+                    
+                    
 
                     txtMaNGS.Text = danhsachNhanVien.Rows[index].Cells["Ma_NGS"].Value.ToString();
 

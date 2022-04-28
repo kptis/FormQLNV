@@ -72,7 +72,7 @@ namespace WinFormsApp1
                     cmd.Parameters.Add("@manv", SqlDbType.NVarChar).Value = nv.MaNV;
                     cmd.Parameters.Add("@hoten", SqlDbType.NVarChar).Value = nv.HoTen;
                     cmd.Parameters.Add("@ns", SqlDbType.Date).Value = nv.NS;
-                    cmd.Parameters.Add("@gt", SqlDbType.Char).Value = nv.GT;
+                    cmd.Parameters.Add("@gt", SqlDbType.NVarChar).Value = nv.GT;
                     cmd.Parameters.Add("@dc", SqlDbType.NVarChar).Value = nv.DC;
                     cmd.Parameters.Add("@luong", SqlDbType.Real).Value = nv.Luong;
                     cmd.Parameters.Add("@mangs", SqlDbType.NVarChar).Value = nv.Ma_NGS;
