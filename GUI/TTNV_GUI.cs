@@ -295,6 +295,21 @@ namespace WinFormsApp1
                     }
                }
           }
+
+          private void txtFindSV_TextChanged(object sender, EventArgs e)
+          {
+               string value = txtFindSV.Text;
+               if (!string.IsNullOrEmpty(value))
+               {
+                    DataTable dt = nvBLL.FindStaff(value);
+                    danhsachNhanVien.DataSource = dt;
+               }
+               else
+               {
+                    ShowAllStaff();
+               }
+
           }
+     }
      }
 

@@ -128,6 +128,19 @@ namespace WinFormsApp1
 
           }
 
+          public DataTable FindStaff(string nv)
+          {
+               string sql = "SELECT * FROM dbo.NHANVIEN WHERE HoTen LIKE N'%" + nv + "%' OR MaNV LIKE N'%" + nv + "%'";
+               SqlConnection conn = dc.getConnect();
+               da = new SqlDataAdapter(sql, conn);
+               conn.Open();
+               DataTable dt = new DataTable() ;
+               da.Fill(dt);
+               conn.Close();
+               return dt;
+
+          }
+
 
      }
 }

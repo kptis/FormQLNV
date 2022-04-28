@@ -69,6 +69,8 @@ namespace WinFormsApp1
                this.txtMaPB = new System.Windows.Forms.TextBox();
                this.txtHoten = new System.Windows.Forms.TextBox();
                this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+               this.txtFindSV = new System.Windows.Forms.TextBox();
+               this.lbFindSV = new System.Windows.Forms.Label();
                ((System.ComponentModel.ISupportInitialize)(this.danhsachNhanVien)).BeginInit();
                this.panel1.SuspendLayout();
                this.SuspendLayout();
@@ -182,6 +184,8 @@ namespace WinFormsApp1
                // 
                this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
                this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+               this.panel1.Controls.Add(this.lbFindSV);
+               this.panel1.Controls.Add(this.txtFindSV);
                this.panel1.Controls.Add(this.txtMaNV);
                this.panel1.Controls.Add(this.lb_tongNV);
                this.panel1.Controls.Add(this.tongNV);
@@ -402,7 +406,7 @@ namespace WinFormsApp1
                this.label1.AutoSize = true;
                this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
                this.label1.ForeColor = System.Drawing.Color.Navy;
-               this.label1.Location = new System.Drawing.Point(375, 223);
+               this.label1.Location = new System.Drawing.Point(378, 214);
                this.label1.Name = "label1";
                this.label1.Size = new System.Drawing.Size(283, 25);
                this.label1.TabIndex = 41;
@@ -486,6 +490,25 @@ namespace WinFormsApp1
                this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
                this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
                // 
+               // txtFindSV
+               // 
+               this.txtFindSV.Location = new System.Drawing.Point(802, 248);
+               this.txtFindSV.Name = "txtFindSV";
+               this.txtFindSV.Size = new System.Drawing.Size(204, 27);
+               this.txtFindSV.TabIndex = 59;
+               this.txtFindSV.TextChanged += new System.EventHandler(this.txtFindSV_TextChanged);
+               // 
+               // lbFindSV
+               // 
+               this.lbFindSV.AutoSize = true;
+               this.lbFindSV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+               this.lbFindSV.ForeColor = System.Drawing.Color.Navy;
+               this.lbFindSV.Location = new System.Drawing.Point(595, 251);
+               this.lbFindSV.Name = "lbFindSV";
+               this.lbFindSV.Size = new System.Drawing.Size(192, 20);
+               this.lbFindSV.TabIndex = 60;
+               this.lbFindSV.Text = "Tìm kiếm theo tên/mã NV";
+               // 
                // Form_QLNV
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -542,6 +565,7 @@ namespace WinFormsApp1
           private System.Windows.Forms.DataGridViewTextBoxColumn DC;
           private System.Windows.Forms.DataGridViewTextBoxColumn Ma_NGS;
           private System.Windows.Forms.DataGridViewTextBoxColumn MaPB;
-         
+          private System.Windows.Forms.Label lbFindSV;
+          private System.Windows.Forms.TextBox txtFindSV;
      }
 }

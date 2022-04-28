@@ -34,5 +34,9 @@ namespace WinFormsApp1
           {
                return dao_nv.getSumOfStaff();
           }
+          public DataTable FindStaff(string nv)
+          {
+               return dao_nv.FindStaff(nv);
+          }
      }
 }
